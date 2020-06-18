@@ -1,0 +1,892 @@
+@import './color.sass'
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+  
+/*---------------------Style general-------------------*/
+body
+  margin: 0
+  line-height: 1.5
+  font-size: 16px
+  font-family: 'Nunito', sans-serif
+  font-weight: 400
+*
+  margin: 0
+  padding: 0
+  outline: none
+  text-decoration: none
+  box-sizing: border-box
+
+::before, ::after
+  box-sizing: border-box
+
+input, textarea, select
+  font-family: 'Nunito', sans-serif
+
+//Agrega un color a la seccion y lo pone del tamaño de la pantalla 
+.section
+  background-color: #f2f2fc
+  min-height: 100vh
+  display: block
+  padding: 0 30px
+
+//Container del contenido de home donde se colocan los elementos
+.container
+  max-width: 1100px
+  width: 100%
+  margin: auto
+
+//Agrega una sobre a la esfera de la imagen
+.shadow-dark
+  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
+
+//Esconde los elementos en los que se ponga la clase
+.hidden
+  display: none !important
+
+//Agrega in padding a los elementos en la pantalla principal
+.section .container
+  padding-top: 60px
+  padding-bottom: 70px
+
+//Coloca y asigna el tamaño del section-title de about
+.section-title
+  -ms-flex: 0 0 100%
+  flex: 0 0 100%
+  max-width: 100%
+  margin-bottom: 90px
+
+//Tamaño de letra y familia al about 
+.section-title h2
+  font-size: 40px 
+  color: #304251 
+  font-family: 'Libre Baskerville', serif
+  margin: 0
+  position: relative
+
+//Crea la linea debajo del about
+.section-title h2::before
+  content: ''
+  height: 4px
+  width: 50px
+  position: absolute
+  top: 100%
+  left: 0
+
+//Crea la segunda linea debajo del about
+.section-title h2::after
+  content: ''
+  height: 4px
+  width: 25px
+  position: absolute
+  top: 100%
+  left: 0
+  margin-top: 8px
+
+//Atributos de la row
+.row
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  margin-right: -15px
+  margin-left: -15px
+  position: relative
+
+//Le agrega mas espacio al container donde esta about me
+.padd-15
+  padding-left: 15px 
+  padding-right: 15px 
+
+//Agrega el boton de top y lo coloca a la derecha abajo
+.scroll 
+  position: fixed
+  top: 90%
+  right: 0
+  margin-right: 12px
+  bottom: 100%
+  display: block
+  z-index: 2
+  transition-duration: 1s
+
+//
+.scroll i
+  font-size: 30px
+  line-height: 60px
+  
+
+//Margin entre los botones de contact
+.form-group .btn 
+  margin-right: 30px
+ 
+
+/*-------------------Header--------------------------*/
+
+//Atributos a las entidades del header 
+.header 
+  height: 10vh
+  background: #304251 
+  padding: 0 20px
+  color: #ffffff
+  z-index: 3
+
+// Coloca el logo de Portafolio a la izquierda y lo pone en mayuscula
+.logo
+  line-height: 10vh
+  font-size: 1vw
+  float: left
+  text-transform: uppercase
+
+//Coloca los elementos de menu a la derecha del Nav
+.menu
+  float: right
+  line-height: 10vh
+  cursor: pointer
+  font-size: 1vw
+
+//Da un padding y atributos a los elementos a del nav
+.menu a
+  color: #ffffff
+  text-transform: uppercase
+  text-decoration: none
+  padding: 0 10px
+  transition: 0.4s
+
+
+//Le da la transicion para que el hover sea lento a la x y ...
+.show-menu-btn, .hide-menu-btn
+  transition: 0.4s
+  font-size: 30px
+  cursor: pointer
+  display: none
+
+//Coloca el btn de los tres puntos a la derecha
+.show-menu-btn
+  float: right
+
+//Lo ajusta al centro del Nav
+.show-menu-btn i
+  line-height: 10vh
+
+//El hover es del color #F49F1C
+.menu a:hover, .show-menu-btn, .hide-menu-btn
+  color: #F49F1C
+
+#chk
+  position: absolute
+  visibility: hidden
+  z-index: -1
+
+.sticky 
+  position: fixed
+  top: 0
+  width: 100%
+  
+
+.sticky + .main-content
+  padding-top: 60px
+
+
+/*-------------------------Home------------------------*/
+.home
+  min-height: 90vh 
+  display: -ms-flexbox
+  display: flex
+
+//Coloca los elementos del 
+.intro
+  text-align: center
+
+//Hace que la imagen del profile sea redonda y le agrega un borde
+.intro img
+  height: 300px
+  width: 300px
+  border-radius: 50%
+  display: inline-block
+  border: 8px solid #ffffff
+
+//Pone el nombre de home en barskerville y añade margin
+.intro h1
+  font-size: 30px
+  color: #204051
+  font-family: 'Libre Baskerville', serif
+  margin: 20px 0 6px
+
+//Separa un poco la profesion de el nombre y le da una tamaño
+.intro p
+  font-size: 16px
+  margin: 0
+  line-height: 22px
+  color: #504e70
+
+//Le agrega un margin a los links de redes sociales
+.social-link
+  margin-top: 25px
+
+//Modifica el aspecto de los iconos a redes sociales
+.social-link a
+  height: 35px
+  width: 35px
+  display: inline-block
+  text-align: center
+  line-height: 35px
+  color: #ffffff
+  margin: 0 4px
+  border-radius: 50%
+  text-decoration: none
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+//Cuando se esta en hover en los iconos crecen 1.1 del normal
+.social-link a:hover
+  -webkit-transform: scale(1.1)
+  transform: scale(1.1)
+
+/*------------------------About------------------------*/
+
+//Le da un tamaño al elemento segun el container
+.about-content
+  -ms-flex: 0 0 100%
+  flex: 0 0 100%
+  max-width: 100%
+
+//Le da un tamaño al elemento segun el container
+.about-text
+  --background-color: blue
+  -ms-flex: 0 0 100%
+  flex: 0 0 100%
+  max-width: 100%
+
+//Separa el texto del subtitulo y le da color
+.about-text h3
+  font-size: 24px
+  margin-bottom: 15px
+  font-weight: 700
+  color: #030F4F
+
+//Cambio de color para el texto y tamaño del texto de about-text
+.about-text p
+  font-size: 16px
+  line-height: 25px
+  color: #4D6977
+  margin: 0
+
+//A personal info le da un 60% del row 
+.personal-info
+  //background-color: red
+  -ms-flex: 0 0 60%
+  flex: 0 0 60%
+  max-width: 60%
+  margin-top: 40px
+
+//Asigna los elementos en flex y los posiciona a un 50% del 60% total
+.info-item
+  -ms-flex: 0 0 50%
+  flex: 0 0 50%
+  max-width: 50%
+
+//A los p de info-item les agrega un borde inferior y el color
+.info-item p
+  font-weight: 600
+  padding: 10px 0
+  font-weight: 16px
+  color: #030F4F
+  margin: 0
+  border-bottom: 1px solid #e8dfec
+
+//Al span de info-item le cambia el color y el grosor de la letra
+.info-item p span
+  font-weight: 400
+  color: #4D6977
+  margin-left: 4px
+  display: inline-block
+
+//A skills le da un 40% del row 
+.skills
+  //background-color: blue
+  -ms-flex: 0 0 40%
+  flex: 0 0 40%
+  max-width: 40%
+  margin-top: 40px
+
+//Coloca en el 100% del 40% los elementos del skill-item y los ordena verticalmente
+.skills .skill-item
+  -ms-flex: 0 0 100%
+  flex: 0 0 100%
+  max-width: 100%
+  margin-bottom: 30px
+
+.skills .skill-item h5
+  line-height: 20px
+  font-weight: 600
+  font-weight: 16px
+  color: #030F4F
+  text-transform: capitalize
+  margin: 0
+
+//Agrega la barra debajo de los nombre o a la par
+.skill-item .progress
+  background-color: #e3e3e3
+  height: 7px
+  border-radius: 4px 
+  width: 100%
+  position: relative
+
+//Agrega la segunda barra donde muestra el verdadero porcentaje 
+.skill-item .progress .progress-in
+  position: absolute
+  left: 0
+  top: 0
+  height: 100%
+  border-radius: 4px 
+
+//Oculta el numero del porcentaje
+.progress .skill-percent
+  line-height: 40px
+  position: absolute
+  right: 0
+  top: -40px
+  color: #4D6977
+  font-weight: 400
+
+//Le da un 50% del row a educacion y lo hace un flex 
+.education
+  -ms-flex: 0 0 50%
+  flex: 0 0 50%
+  max-width: 50%
+  margin-top: -40px
+
+//Atributos para el titulo Educacion
+.title
+  font-size: 24px
+  margin-bottom: 30px
+  font-weight: 700
+  color: #030F4F
+
+//Crea una caga debajo de educacion y le asigna el 100% del 50%
+.timeline-box
+  -ms-flex: 0 0 100%
+  flex: 0 0 100%
+  max-width: 100%
+
+//Modicadores de los items que van a estar dentro de la timeline-box
+.timeline
+  background-color: #fdf9ff
+  padding: 30px 15px
+  border: 1px solid #d4d4e3
+  border-radius: 10px
+  width: 100%
+  position: relative
+
+//Coloca la linea del timeline a la par de los elementos
+.timeline .timeline-item
+  position: relative
+  padding-left: 37px
+  padding-bottom: 50px
+
+//Quita el espacio extra creado por la linea de timeline en la parte inferior
+.timeline .timeline-item:last-child
+  padding-bottom: 0px
+
+//Crea la linea del que se va a usar para el timeline
+.timeline .timeline-item::before
+  content: ''
+  width: 1px 
+  position: absolute
+  height: 100%
+  left: 7px
+  top: 0
+
+//Crea el circulo a la par del icono de calendario
+.timeline .circle-dot
+  position: absolute
+  left: 0
+  top: 0
+  height: 15px
+  width: 15px
+  left: 0
+  border-radius: 50%
+
+//A los años dentro del time line les da un margin y un font size
+.timeline .timeline-date
+  font-size: 14px
+  font-weight: 400
+  margin-bottom: 12px
+  color: #4D6977
+
+//Separacion entre los años y el icono de calendario
+.timeline .timeline-date .fa
+  margin-right: 5px
+
+//Al titulo dentro del timeline-title se le agranda y se le agrega un margin
+.timeline .timeline-title
+  font-weight: 700
+  font-size: 18px
+  margin-bottom: 15px
+  text-transform: capitalize
+  color: #030F4F
+
+//Le da un padding al texto debajo del titulo de timeline y le cambia el color
+.timeline .timeline-text
+  font-size: 16px
+  font-size: 16px
+  line-height: 25px
+  color: #4D6977
+  margin: 0
+
+/*------------------------Habilities------------------------*/
+.habilities
+  padding-bottom: 40px
+//Es el tamaño del cubo alrededor de la habilidad
+.habilities-item
+  -ms-flex: 0 0 33.33%
+  flex: 0 0 33.33%
+  max-width: 33.33%
+  margin-bottom: 30px
+  //Sirve para que cuando se agregue mas texto las cards crescan igual
+  // display: -ms-flexbox
+  // display: flex
+
+//La estilizacion del cubo y el orden de su texto
+.habilities-item-inner
+  background-color: #fdf9ff
+  border: 1px solid #d4d4e3
+  border-radius: 10px
+  padding: 30px 15px
+  text-align: center
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+//Agrega una sombra a la parte trasera de los "cards"
+.habilities-item-inner:hover
+  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
+
+//Centraliza el Icono y le hace a su container redondo
+.habilities-item-inner .icon
+  height: 60px
+  width: 60px
+  display: block
+  margin: 0 auto 30px
+  text-align: center
+  border-radius: 50%
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+//Hace mas pequeño el icono y le cambia el color cuando esta en hover
+.habilities-item-inner:hover .icon .fa
+  font-size: 25px
+  color: #ffffff
+
+//Tamaño y reduce la altura a la que se encuentra el icono
+.habilities-item-inner .icon .fa
+  font-size: 40px
+  line-height: 60px
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+//Color, grosor y tamaño de la linea
+.habilities-item-inner h4
+  font-size: 18px
+  margin-bottom: 15px
+  color: #030F4F
+  font-weight: 700
+  text-transform: capitalize
+
+//Color, separacion y tamaño de la linea
+.habilities-item-inner p
+  font-size: 16px
+  color: #4D6977
+  line-height: 25px
+  margin: 0
+
+
+/*------------------------Design------------------------*/
+
+.design .container
+  padding-bottom: 40px
+
+//Coloca los elementos en un flex del 100% del espacio y los centra
+.design-filter
+  //background-color: red
+  -ms-flex: 0 0 100%  
+  flex: 0 0 100%
+  max-width: 100%
+  text-align: center
+  margin-bottom: 40px
+
+//Atributos para los botones del filter
+.design-filter button
+  border: none
+  background-color: transparent
+  font-size: 18px
+  font-weight: 700
+  text-transform: capitalize
+  margin: 0 10px
+  color: #030F4F
+  cursor: pointer
+  border-bottom: 2px solid transparent
+  white-space: nowrap
+  padding-bottom: 2px
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+//Les da un tamaño en proporcion con la pantalla de un 33.33%
+.design-item
+  flex: 0 0 33.33%
+  max-width: 33.33%
+  margin-bottom: 30px
+
+//Le da un borde a las imagenes
+.design-item-inner 
+  border: 6px solid #fdf9ff
+  border-radius: 10px
+  overflow: hidden
+  cursor: pointer
+  position: relative
+
+//Muestra el 100 de la imagen en el tamaño que se le asigna
+.design-item-inner .design-img img
+  width: 100%
+  display: block
+
+//Agrega la pantalla negra a las imagenes junto con el texto y el icono
+.design-item .design-info
+  position: absolute
+  left: 0
+  top: 0
+  background-color: rgba(0, 0, 0, 0.8) 
+  height: 100%
+  width: 100%
+  z-index: 1
+  padding: 30px
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+  opacity: 0
+
+//Hace que aparezca la pantalla negra sobre las imagenes cuando se pone el mouse encimna
+.design-item-inner:hover .design-info
+  opacity: 1
+ 
+
+//Modifica el h4 de las imagenes para poner el nombre de su categoria en blanco
+.design-item .design-info h4
+  font-size: 18px
+  font-weight: 700
+  color: #ffffff
+  text-transform: capitalize
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+  -webkit-transform: translateX(-20px)
+  transform: translateX(-20px)
+  opacity: 0
+
+//Es la animacion en la que se mueven hacia la derecha las categorias de los elementos
+.design-item-inner:hover .design-info h4
+  opacity: 1
+  -webkit-transform: translateX(0px)
+  transform: translateX(0px)
+
+//Coloca un container alrededor del icono y le da un color y lo anima despues
+.design-item .design-info .icon
+  height: 40px
+  width: 40px
+  background-color: #ffffff
+  text-align: center
+  border-radius: 50%
+  position: absolute
+  right: 30px
+  bottom: 30px
+  opacity: 0
+  -webkit-transition: all 0.3s ease
+  transition: all 0.3s ease
+  -webkit-transform: translateX(20px)
+  transform: translateX(20px)
+
+//Animacion en la que el buscar se mueve hacia la izquierda de la caja
+.design-item-inner:hover .design-info .icon
+  opacity: 1
+  -webkit-transform: translateX(0px)
+  transform: translateX(0px)
+
+//Coloca el icono en el centro del ciruclo
+.design-item .design-info .icon .fa
+  line-height: 40px
+
+/*------------------------Videos------------------------*/
+
+//Es el tamaño del cubo alrededor de la habilidad
+.videos-item
+  -ms-flex: 0 0 50%
+  flex: 0 0 50%
+  max-width: 50%
+  margin-bottom: 30px
+  //Sirve para que cuando se agregue mas texto las cards crescan igual
+  // display: -ms-flexbox
+  // display: flex
+
+//Le da un borde blanco y una sombra a los iframes
+iframe
+  border: 6px solid #fdf9ff
+  border-radius: 10px
+  -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
+
+//Hace escalable al video 
+.responsive-iframe
+  width: 100%
+  height: 0
+  padding-bottom: 56.25%
+  position: relative 
+
+//hace al video escalable a la ventena
+.responsive-iframe iframe
+  position: absolute
+  width: 100%
+  height: 100%
+
+/*------------------------Contact------------------------*/
+.contact
+  min-height: 70vh
+//Le asigna un 33.33% del 100% de la pantalla
+.contact .contact-info-item
+  -ms-flex: 0 0 33.33%
+  flex: 0 0 33.33%
+  max-width: 33.33%
+  text-align: center
+  margin-bottom: 40px
+
+.icon
+  display: inline-block
+
+//Hace los iconos mas grandes
+.icon .fa
+  font-size: 60px
+
+//Al los titulos los hace mas gruesos y les da un color especifico
+.contact-info-item h4
+  font-size: 30px
+  font-weight: 00
+  color: #030F4F
+  text-transform: capitalize
+  margin: 15px 0 5px
+
+//Color especifico a los P y tamaño
+.contact-info-item p
+  font-size: 25px
+  line-height: 25px
+  color: #4D6977
+  margin: 0
+  font-weight: 400
+
+  
+
+/*------------------------Responsive------------------------*/
+
+//Pantallas mas pequeñas o iguales a 650
+@media screen and (max-width: 650px)
+
+  //------Home--------
+  .intro img
+    height: 200px
+    width: 200px
+  //Hace mas grande el p del home 
+  .intro p 
+    font-size: 20px
+  
+  //Tamaño circulos de los iconos
+  .social-link a
+    width: 60px
+    height: 60px
+
+  //Tamaño iconos y posicion dentro del ciruclo
+  .intro .fa
+    font-size: 30px
+    line-height: 60px
+  
+  //Cambia el valor de pantalla completa a un 80% de la pantalla
+  .home
+    min-height: 80vh
+
+
+  //------Generales--------
+  //Hace que las rows sean el 100% haciendo que los elementos se muestre en vertical 
+  .personal-info, .skills, .education, .habilities-item, .design-item, 
+  .contact .contact-info-item,
+    -ms-flex: 0 0 100%
+    flex: 0 0 100%
+    max-width: 100%
+  
+  //Quita el padding entre secciones para que sea mas seguido en la version mobile
+  .section .container
+    padding-bottom: 0
+
+  //Tamaño de la la palabra portafolio 
+  .logo
+    font-size: 24px
+
+
+  //------Header--------
+  .show-menu-btn, .hide-menu-btn
+    display: block
+
+  //atributos para cuando se le de click a los 3 puntos del header 
+  .menu
+    position: fixed
+    width: 100%
+    height: 100vh
+    background: #333
+    right: -100%
+    top: 0
+    text-align: center
+    padding: 50px 0
+    line-height: 11vh
+    transition: 0.7s
+    z-index: 12
+  
+  //Tamaño de los elementos a del header cuando se esta dentro de los 3 puntos
+  .menu a
+    display: block
+    padding: 10px
+    font-size: 4vh
+
+  //Posicion de la X dentro del header
+  .hide-menu-btn
+    position: absolute
+    top: 20px
+    right: 40px
+
+  //Cuando se apreta el boton este cierra la ventana
+  #chk:checked ~ .menu
+    right: 0
+
+  //------About--------
+  //Margen para evitar que se vea pegado a personal info
+  .education
+    margin-top: 0
+
+  //-------Contact--------
+  //Reduce el tamaño del container de contact
+  .contact
+    min-height: 110vh
+  .contact-info-item p
+    font-size: 3vh
+
+  //-------Video------
+  //Hace que los videos se desplieguen 1 a 1 en celular
+  .videos-item 
+    -ms-flex: 0 0 100%
+    flex: 0 0 100%
+    max-width: 100%
+    margin-bottom: 30px
+
+@media screen and (min-width: 651px) and (max-width: 1280px)
+  
+  //------Generales--------
+  //Divide las rows en 2 y les da un 50% a cada elementos si es que esta dentro de una row contiguo a otro
+  .habilities-item, .design-item, .contact .contact-info-item 
+    -ms-flex: 0 0 50%
+    flex: 0 0 50%
+    max-width: 50%
+    margin-bottom: 30px
+  
+  //Quita el padding entre secciones para que sea mas seguido en la version mobile
+  .section .container
+    padding-bottom: 0
+
+  //Tamaño de la la palabra portafolio 
+  .logo
+    font-size: 24px
+
+  //------About--------
+  //Separa la seccion de education de personal info y le da el 100% del row
+  .education
+    margin-top: 0
+    -ms-flex: 0 0 75%
+    flex: 0 0 75%
+    max-width: 75%
+
+
+  //------Home--------
+  //Hace mas grande el p del home 
+  .intro p 
+    font-size: 20px
+  
+  //Tamaño circulos de los iconos
+  .social-link a
+    width: 60px
+    height: 60px
+
+  //Tamaño iconos y posicion dentro del ciruclo
+  .intro .fa
+    font-size: 30px
+    line-height: 60px
+
+  //Escala la letra el header para la version de tablet
+  .menu
+    font-size: 1.7vw
+
+  .contact
+    min-height: 100vh
+
+//Sirve para que estos ajustes se activen en pantallas mayores o igual a 1281px 
+@media screen and (min-width: 1281px)
+
+  //--------General--------
+  //Reduce el tamaño de los containers asi no se separan tanto entre ellos
+  .habilities, .about, .design, .video
+    min-height: 10vh
+
+  //Da un margin para que no se pegue a personal info
+  .education
+    margin-top: -5vh
+
+  //Quita el padding entre secciones para que sea mas seguido en la version mobile
+  .section .container, 
+    padding-bottom: 0
+  
+  //Quita la version de escritorio el boton de auto scroll
+  .scroll 
+    display: none
+
+
+  //------Header-------
+    .menu a
+      font-size: 1vw
+
+  //------Home--------
+  //Hace mas grande el p del home 
+  .intro p 
+    font-size: 20px
+  
+  //Tamaño circulos de los iconos
+  .social-link a
+    width: 60px
+    height: 60px
+
+  //Tamaño iconos y posicion dentro del ciruclo
+  .intro .fa
+    font-size: 30px
+    line-height: 60px
+
+
+  //------About--------
+  
+  .about-text h3
+    font-size: 30px
+
+  //Modifica el tamaño de los elementos p
+  .about-text p
+    font-size: 23px
+  
+  //Modifica el tamaño de los elementos p
+  .info-item p
+    font-size: 20px 
+
+  //Modifica el tamaño de los elementos h5
+  .skills .skill-item h5
+    font-size: 20px
+
+  //Modifica el orden de los elementos dentro del about
+  .info-item p span
+    display: block
+    margin-left: 0
