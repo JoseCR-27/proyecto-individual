@@ -8,6 +8,7 @@ import i4 from './img/design/2.gif';
 import i5 from './img/design/3.gif';
 import i6 from './img/design/4.gif';
 import i7 from './img/design/5.png';
+import i8 from './img/design/6.JPG';
 
 function Page () {
 
@@ -47,7 +48,7 @@ function Page () {
                         to="home"
                         spy={true}
                         smooth={true}
-                        offset={-90}
+                        offset={-70}
                         duration= {500}
                     >Home</Link>
 
@@ -56,7 +57,7 @@ function Page () {
                         to="about"
                         spy={true}
                         smooth={true}
-                        offset={-90}
+                        offset={-70}
                         duration= {500}
                     >Acerca de</Link>
 
@@ -65,7 +66,7 @@ function Page () {
                         to="habilities"
                         spy={true}
                         smooth={true}
-                        offset={-90}
+                        offset={-70}
                         duration= {500}
                     >Habilidades</Link>
 
@@ -74,7 +75,7 @@ function Page () {
                         to="design"
                         spy={true}
                         smooth={true}
-                        offset={-90}
+                        offset={-70}
                         duration= {500}
                     >Trabajos</Link>
 
@@ -83,7 +84,7 @@ function Page () {
                         to="video"
                         spy={true}
                         smooth={true}
-                        offset={-90}
+                        offset={-70}
                         duration= {500}
                     >Videos</Link>
 
@@ -137,7 +138,7 @@ function Page () {
                                 <div className="row">
                                     <div className="about-text padd-15">
                                         <h3>Me llamo Jose Andres y soy estudiante de <span>ITM</span></h3>
-                                        <p>Soy un estudiante de tercer año de la carrera de Informática y Tecnología Multimedia en la Universidad de Costa Rica. Durante la carrera he trabajado en las areas de diseño y desarrollo web, estoy preparado para adaptarme a diferentes ambientes laborales, disfruto lo que hago y siempre estoy en busca de mejorar.</p>
+                                        <p>Soy un estudiante de tercer año de la carrera de Informática y Tecnología Multimedia en la Universidad de Costa Rica. C1 en ingles y durante la carrera he trabajado en las areas de diseño y desarrollo web, estoy preparado para adaptarme a diferentes ambientes laborales, disfruto lo que hago y siempre estoy en busca de mejorar.</p>
                                     </div>
                                 </div>
 
@@ -230,6 +231,13 @@ function Page () {
                                                         <h4 className="timeline-title">Bachillerato Colegio Biligüe Nueva Esperanza</h4>
                                                         <p className="timeline-text">Durante esos 6 años recibí clases y me gradue del Colegio Biligüe Nueva Esperanza</p>
                                                     </div>
+                                                {/* End Timeline Item*/}
+                                                <div className="timeline-item">
+                                                    <div className="circle-dot"></div>
+                                                    <h6 className="timeline-date"><i className="fa fa-calendar"></i>2014 - 2015</h6>
+                                                    <h4 className="timeline-title">Instituto Interactivo de Idiomas</h4>
+                                                    <p className="timeline-text">Certificado C1 en Ingles</p>
+                                                </div>
                                                 {/* End Timeline Item*/}
                                                 {/* Timeline Item*/}
                                                 <div className="timeline-item">
@@ -339,7 +347,7 @@ function Page () {
                                         <img src={i2} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Habilities</h4>
+                                        <h4>Habilidades</h4>
                                     </div>
                                 </div>
                             </div>
@@ -352,7 +360,7 @@ function Page () {
                                         <img src={i3} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Design</h4>
+                                        <h4>Videojuego</h4>
                                     </div>
                                 </div>
                             </div>
@@ -365,7 +373,7 @@ function Page () {
                                         <img src={i4} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Design</h4>
+                                        <h4>Animación</h4>
                                     </div>
                                 </div>
                             </div>
@@ -378,7 +386,7 @@ function Page () {
                                         <img src={i5} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Design</h4>
+                                        <h4>Libro de Marca TUP</h4>
                                     </div>
                                 </div>
                             </div>
@@ -392,7 +400,7 @@ function Page () {
                                         <img src={i6} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Design</h4>
+                                        <h4>Pagina Web</h4>
                                     </div>
                                 </div>
                             </div>
@@ -406,7 +414,20 @@ function Page () {
                                         <img src={i7} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Design</h4>
+                                        <h4>Sistema Operativo</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Design Items */}
+
+                            {/* Design Items */}
+                            <div className="design-item padd-15" >
+                              <div className="design-item-inner shadow-dark">
+                                    <div className="design-img">
+                                        <img src={i8} alt="design"/>
+                                    </div>
+                                    <div className="design-info">
+                                        <h4>Imagotipo</h4>
                                     </div>
                                 </div>
                             </div>

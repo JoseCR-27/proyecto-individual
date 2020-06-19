@@ -9,7 +9,7 @@ class App extends React.Component {
       return (
         <div>
             <Page/>
-            <a href="#" className="scroll top" ><i className="fa fa-angle-double-up" ></i></a>
+            <a href="#" className="scroll top"><i className="fa fa-angle-double-up" ></i></a>
         </div>
     );	
   }
