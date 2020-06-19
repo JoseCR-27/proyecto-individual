@@ -1,6 +1,6 @@
 ## Portafolio Jose Andres Duarte Hidalgo 
 
 Pagina Web 
-https://github.com/JoseCR-27/proyecto-individual/issues/1#issue-642175151
+![image](https://user-images.githubusercontent.com/62898109/85173073-a33b4900-b22f-11ea-9f62-72af8d6efb9b.png)
 
 
