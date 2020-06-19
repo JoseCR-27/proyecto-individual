@@ -9,6 +9,8 @@ import i5 from './img/design/3.gif';
 import i6 from './img/design/4.gif';
 import i7 from './img/design/5.png';
 import i8 from './img/design/6.JPG';
+import i9 from './img/design/7.JPG';
+import i10 from './img/design/8.jpg';
 
 function Page () {
 
@@ -370,10 +372,10 @@ function Page () {
                             <div className="design-item padd-15" >
                               <div className="design-item-inner shadow-dark">
                                     <div className="design-img">
-                                        <img src={i4} alt="design"/>
+                                        <img src={i10} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Animación</h4>
+                                        <h4>Captura de Imagenes</h4>
                                     </div>
                                 </div>
                             </div>
@@ -392,20 +394,18 @@ function Page () {
                             </div>
                             {/* Design Items */}
 
-
                             {/* Design Items */}
                             <div className="design-item padd-15" >
                               <div className="design-item-inner shadow-dark">
                                     <div className="design-img">
-                                        <img src={i6} alt="design"/>
+                                        <img src={i9} alt="design"/>
                                     </div>
                                     <div className="design-info">
-                                        <h4>Pagina Web</h4>
+                                        <h4>Medios Digitales para Diseñar</h4>
                                     </div>
                                 </div>
                             </div>
                             {/* Design Items */}
-
 
                             {/* Design Items */}
                             <div className="design-item padd-15" >
@@ -424,10 +424,36 @@ function Page () {
                             <div className="design-item padd-15" >
                               <div className="design-item-inner shadow-dark">
                                     <div className="design-img">
+                                        <img src={i6} alt="design"/>
+                                    </div>
+                                    <div className="design-info">
+                                        <h4>Pagina Web</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Design Items */}
+
+                            {/* Design Items */}
+                            <div className="design-item padd-15" >
+                              <div className="design-item-inner shadow-dark">
+                                    <div className="design-img">
                                         <img src={i8} alt="design"/>
                                     </div>
                                     <div className="design-info">
                                         <h4>Imagotipo</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Design Items */}
+
+                            {/* Design Items */}
+                            <div className="design-item padd-15" >
+                              <div className="design-item-inner shadow-dark">
+                                    <div className="design-img">
+                                        <img src={i4} alt="design"/>
+                                    </div>
+                                    <div className="design-info">
+                                        <h4>Animación</h4>
                                     </div>
                                 </div>
                             </div>
